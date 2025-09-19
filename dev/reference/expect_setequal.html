@@ -5,8 +5,12 @@ expect_setequal(x, y) tests that every element of x occurs in y,
 and that every element of y occurs in x.
 expect_contains(x, y) tests that x contains every element of y
 (i.e. y is a subset of x).
-expect_in(x, y) tests every element of x is in y
+expect_not_contains(x, y) tests that x contains none of the elements
+of y (i.e. y is disjoint from x).
+expect_in(x, y) tests that every element of x is in y
 (i.e. x is a subset of y).
+expect_not_in(x, y) tests that no element of x is in y
+(i.e. x is disjoint from y).
 expect_mapequal(x, y) treats lists as if they are mappings between names
 and values. Concretely, this drops NULLs in both objects and sorts
 named components.
@@ -17,8 +21,12 @@ expect_setequal(x, y) tests that every element of x occurs in y,
 and that every element of y occurs in x.
 expect_contains(x, y) tests that x contains every element of y
 (i.e. y is a subset of x).
-expect_in(x, y) tests every element of x is in y
+expect_not_contains(x, y) tests that x contains none of the elements
+of y (i.e. y is disjoint from x).
+expect_in(x, y) tests that every element of x is in y
 (i.e. x is a subset of y).
+expect_not_in(x, y) tests that no element of x is in y
+(i.e. x is disjoint from y).
 expect_mapequal(x, y) treats lists as if they are mappings between names
 and values. Concretely, this drops NULLs in both objects and sorts
 named components.
@@ -92,8 +100,12 @@ named components.
 and that every element of <code>y</code> occurs in <code>x</code>.</p></li>
 <li><p><code>expect_contains(x, y)</code> tests that <code>x</code> contains every element of <code>y</code>
 (i.e. <code>y</code> is a subset of <code>x</code>).</p></li>
-<li><p><code>expect_in(x, y)</code> tests every element of <code>x</code> is in <code>y</code>
+<li><p><code>expect_not_contains(x, y)</code> tests that <code>x</code> contains none of the elements
+of <code>y</code> (i.e. <code>y</code> is disjoint from <code>x</code>).</p></li>
+<li><p><code>expect_in(x, y)</code> tests that every element of <code>x</code> is in <code>y</code>
 (i.e. <code>x</code> is a subset of <code>y</code>).</p></li>
+<li><p><code>expect_not_in(x, y)</code> tests that no element of <code>x</code> is in <code>y</code>
+(i.e. <code>x</code> is disjoint from <code>y</code>).</p></li>
 <li><p><code>expect_mapequal(x, y)</code> treats lists as if they are mappings between names
 and values. Concretely, this drops <code>NULL</code>s in both objects and sorts
 named components.</p></li>
@@ -107,7 +119,11 @@ named components.</p></li>
 <span></span>
 <span><span class="fu">expect_contains</span><span class="op">(</span><span class="va">object</span>, <span class="va">expected</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">expect_in</span><span class="op">(</span><span class="va">object</span>, <span class="va">expected</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">expect_not_contains</span><span class="op">(</span><span class="va">object</span>, <span class="va">expected</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">expect_in</span><span class="op">(</span><span class="va">object</span>, <span class="va">expected</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">expect_not_in</span><span class="op">(</span><span class="va">object</span>, <span class="va">expected</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
