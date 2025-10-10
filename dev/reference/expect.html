@@ -93,7 +93,9 @@ expectations. Now we instead recommend <code><a href="fail.html">pass()</a></cod
 
 
 <dt id="arg-failure-message">failure_message<a class="anchor" aria-label="anchor" href="#arg-failure-message"></a></dt>
-<dd><p>Message to show if the expectation failed.</p></dd>
+<dd><p>A character vector describing the failure. The
+first element should describe the expected value, and the second (and
+optionally subsequence) elements should describe what was actually seen.</p></dd>
 
 
 <dt id="arg-info">info<a class="anchor" aria-label="anchor" href="#arg-info"></a></dt>
@@ -114,7 +116,7 @@ Expert use only.</p></dd>
 
 <dt id="arg-trace-env">trace_env<a class="anchor" aria-label="anchor" href="#arg-trace-env"></a></dt>
 <dd><p>If <code>trace</code> is not specified, this is used to generate an
-informative traceack for failures. You should only need to set this if
+informative traceback for failures. You should only need to set this if
 you're calling <code><a href="fail.html">fail()</a></code> from a helper function; see
 <code><a href="../articles/custom-expectation.html">vignette("custom-expectation")</a></code> for details.</p></dd>
 
